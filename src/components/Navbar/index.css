@@ -1,0 +1,30 @@
+nav {
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 40px 60px 60px 60px;
+}
+
+.navbar-logo {
+  flex-grow: 1;
+}
+
+.navbar-support-content {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.navbar-support {
+  font-family: 'Noto Sans', sans-serif;
+  padding-left: 50px;
+}
+
+.contact {
+  padding-right: 50px;
+}
