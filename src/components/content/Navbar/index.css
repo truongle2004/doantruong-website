@@ -1,5 +1,6 @@
 nav {
   width: 100%;
+  background: linear-gradient(90deg, #4e65ff, #92effd);
 }
 
 .navbar-content {
@@ -7,11 +8,16 @@ nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 40px 60px 60px 60px;
+  padding: 0px 60px 20px 60px;
 }
 
 .navbar-logo {
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+img {
+  cursor: pointer;
 }
 
 .navbar-support-content {
@@ -21,8 +27,9 @@ nav {
 }
 
 .navbar-support {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: "Noto Sans", sans-serif;
   padding-left: 50px;
+  text-decoration: underline;
 }
 
 .contact {

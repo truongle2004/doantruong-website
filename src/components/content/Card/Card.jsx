@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
-import PropTypes from "prop-types";
-import "./index.css";
+import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
+import './index.scss';
 
 const cardVariants = {
   offscreen: {
@@ -10,7 +10,7 @@ const cardVariants = {
     y: 50,
     rotate: -10,
     transition: {
-      type: "spring",
+      type: 'spring',
       bounce: 0.4,
       duration: 0.8,
     },
@@ -20,20 +20,20 @@ const cardVariants = {
 const Card = ({ cover }) => {
   return (
     <motion.div
-      className="card-container"
-      initial="offscreen"
-      whileInView="onscreen"
+      className='card-container'
+      initial='offscreen'
+      whileInView='onscreen'
       viewport={{ once: true, amount: 0.8 }}
     >
       <div
-        className="splash"
+        className='splash'
         style={{
-          background: "linear-gradient(90deg, #2E3192, #1BFFFF)",
+          background: 'linear-gradient(90deg, #2E3192, #1BFFFF)',
         }}
       />
-      <motion.div className="card" variants={cardVariants}>
+      <motion.div className='card' variants={cardVariants}>
         {cover && cover.length > 0 ? (
-          <img src={cover[0]} alt="Cover image" />
+          <img src={cover[0]} alt='Cover image' />
         ) : (
           <p>No cover image available</p>
         )}
