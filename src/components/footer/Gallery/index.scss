@@ -13,26 +13,28 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-.gallery-item {
-  position: relative;
-  margin: 10px;
-}
 
-.gallery-image {
-  width: 279px;
-  height: 279px;
-  object-fit: cover;
-}
+  .gallery-item {
+    position: relative;
+    margin: 10px;
+  }
 
-.gallery-caption {
-  position: absolute;
-  background-color: red;
-  color: white;
-  padding: 5px;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  text-align: center;
+
+  .gallery-image {
+    width: 279px;
+    height: 279px;
+    object-fit: cover;
+  }
+
+  .gallery-caption {
+    position: absolute;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
