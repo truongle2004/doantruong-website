@@ -1,4 +1,4 @@
-import styles from './Navbar.module.scss'; // Adjust the path as needed
+import styles from './index.module.scss'; // Adjust the path as needed
 import logoGDU from '../../../assets/logoGDU.png';
 import logoDoan from '../../../assets/logoDoan.png';
 
@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className={styles.navbarSupportContent}>
           <div className={styles.navbarSupport}>DETAIL</div>
           <div className={styles.navbarSupport}>ABOUT</div>
-          <div className={styles.navbarSupport + ' ' + styles.contact}>
+          <div className={`${styles.navbarSupport} ${styles.contact}`}>
             CONTACT
           </div>
         </div>

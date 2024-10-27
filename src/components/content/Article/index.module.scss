@@ -1,25 +1,26 @@
-.article-container {
+.articleContainer {
   font-size: 24px;
   width: 80%;
-  text-wrap: wrap;
   margin: 100px auto;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
+  justify-content: flex-start;
+  word-wrap: break-word;
 }
 
-.article-content {
+.articleContent {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
-  text-wrap: wrap;
 }
 
 .content {
   margin-top: 20px;
-  text-wrap: wrap;
+  word-wrap: break-word;
 }
 
-.article-images {
+.articleImages {
   margin: 20px auto;
+  display: flex;
+  justify-content: center;
 }
