@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
-import './index.scss';
+import styles from './index.module.scss';
 import children from '../../../assets/children5.png';
 import logoDoan from '../../../assets/logoDoan.png';
 import logoGDU from '../../../assets/logoGDU.png';
 
 const HeadingTitle = () => {
   return (
-    <div className='image-container'>
-      <img src={children} alt='tapthe' className='image' />
+    <div className={styles["image-container"]}>
+      <img src={children} alt='tapthe' className={styles.image} />
 
-      <div className='overlay'>
+      <div className={styles.overlay}>
         <motion.div
-          className='content'
+          className={styles.content}
           initial='hidden'
           animate='visible'
           variants={{
@@ -28,7 +28,7 @@ const HeadingTitle = () => {
           }}
         >
           <motion.p
-            className='subtitle'
+            className={styles.subtitle}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
@@ -37,7 +37,7 @@ const HeadingTitle = () => {
           </motion.p>
 
           <motion.h1
-            className='title'
+            className={styles.title}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, ease: 'easeOut' }}
@@ -45,16 +45,16 @@ const HeadingTitle = () => {
             ĐOÀN TRƯỜNG ĐẠI HỌC GIA ĐỊNH
           </motion.h1>
 
-          <div className='logo'>
+          <div className={styles.logo}>
             <img
               src={logoDoan}
               alt='logo đoàn thanh niên'
-              className='logo-doan'
+              className={styles["logo-doan"]}
             />
             <img
               src={logoGDU}
               alt='logo Gia Dinh university'
-              className='logo-gdu'
+              className={styles["logo-gdu"]}
             />
           </div>
         </motion.div>

@@ -1,36 +1,33 @@
-import "./index.css";
-import logoGDU from "../../assets/logoGDU.png";
-import logoDoan from "../../assets/logoDoan.png";
+import styles from './Navbar.module.scss'; // Adjust the path as needed
+import logoGDU from '../../../assets/logoGDU.png';
+import logoDoan from '../../../assets/logoDoan.png';
 
 const Navbar = () => {
+  const handleClickImageGDU = () => {
+    window.location.href = 'https://giadinh.edu.vn/';
+  };
+
+  const handleClickImageDoan = () => {
+    window.location.href = 'https://doanthanhnien.vn/';
+  };
+
   return (
-    <nav>
-      <div className="navbar-content">
-        <div className="navbar-logo">
+    <nav className={styles.nav}>
+      <div className={styles.navbarContent}>
+        <div className={styles.navbarLogo}>
           <div>
-            <img
-              src={logoDoan}
-              alt="logo"
-              style={{
-                width: "80px",
-                height: "80px",
-              }}
-            />
+            <img src={logoDoan} alt='logo' onClick={handleClickImageDoan} />
           </div>
           <div>
-            <img
-              src={logoGDU}
-              alt="logo"
-              style={{
-                width: "100px",
-              }}
-            />
+            <img src={logoGDU} alt='logo' onClick={handleClickImageGDU} />
           </div>
         </div>
-        <div className="navbar-support-content">
-          <div className="navbar-support detail">DETAIL</div>
-          <div className="navbar-support about">ABOUT</div>
-          <div className="navbar-support contact">CONTACT</div>
+        <div className={styles.navbarSupportContent}>
+          <div className={styles.navbarSupport}>DETAIL</div>
+          <div className={styles.navbarSupport}>ABOUT</div>
+          <div className={styles.navbarSupport + ' ' + styles.contact}>
+            CONTACT
+          </div>
         </div>
       </div>
     </nav>

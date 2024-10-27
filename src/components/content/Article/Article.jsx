@@ -28,13 +28,6 @@ const Article = () => {
             showNavs={true}
           />
         </div>
-        {/*
-        <div className="article-images">
-          {data[1].cover.map((image, index) => (
-            <img src={image} key={index} />
-          ))}
-        </div>
-*/}
       </article>
     </>
   );

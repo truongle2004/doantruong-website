@@ -1,0 +1,49 @@
+$primary-gradient: linear-gradient(90deg, #4e65ff, #92effd);
+$font-family: 'Noto Sans', sans-serif;
+
+nav {
+  width: 100%;
+  background: $primary-gradient;
+
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 60px 20px;
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        cursor: pointer;
+
+        &:first-child {
+          width: 80px;
+          height: 80px;
+        }
+
+        &:last-child {
+          width: 100px;
+        }
+      }
+    }
+
+    .navbar-support-content {
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+
+      .navbar-support {
+        font-family: $font-family;
+        padding-left: 50px;
+        text-decoration: underline;
+
+        &.contact {
+          padding-right: 50px;
+        }
+      }
+    }
+  }
+}
