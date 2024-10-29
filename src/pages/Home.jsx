@@ -1,13 +1,23 @@
-import Post from '../components/content/Post/Post';
-import { Gallery } from '../components/footer/Gallery/Gallery';
-import HeadingTitle from '../components/header/Title/Title';
+import React, { Suspense } from 'react';
+
+const HeadingTitle = React.lazy(() => import('../components/header/Title/Title'));
+const Post = React.lazy(() => import('../components/content/Post/Post'));
+const Gallery = React.lazy(() => import('../components/footer/Gallery/Gallery'));
 
 const Home = () => {
   return (
     <>
-      <HeadingTitle />
-      <Post />
-      <Gallery />
+      <Suspense fallback={<div>Loading title...</div>}>
+        <HeadingTitle />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading post...</div>}>
+        <Post />
+      </Suspense>
+
+      <Suspense fallback={<div>Loading gallery...</div>}>
+        <Gallery />
+      </Suspense>
     </>
   );
 };

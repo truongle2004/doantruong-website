@@ -1,6 +1,7 @@
-import SimpleImageSlider from 'react-simple-image-slider';
-import postStore from './../../../stores/postStore';
-import styles from './index.module.scss';
+import SimpleImageSlider from "react-simple-image-slider";
+import postStore from "./../../../stores/postStore";
+import styles from "./index.module.scss";
+import Navbar from "../Navbar/Navbar";
 
 const Article = () => {
   const post = postStore((state) => state.post);
@@ -15,6 +16,7 @@ const Article = () => {
 
   return (
     <>
+      <Navbar />
       <article className={styles.articleContainer}>
         <h1 className={styles.articleTitle}>{post?.title}</h1>
 
