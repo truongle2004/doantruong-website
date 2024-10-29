@@ -1,27 +1,22 @@
-import React from "react";
-import styles from "./index.module.scss";
-import SimpleImageSlider from "react-simple-image-slider";
-import postStore from "./../../../stores/postStore";
+import SimpleImageSlider from 'react-simple-image-slider';
+import postStore from './../../../stores/postStore';
+import styles from './index.module.scss';
 
 const Article = () => {
   const post = postStore((state) => state.post);
 
-  console.log(post.title)
-  console.log(post.content[0])
-  console.log('post', post)
-
-  if(!post) {
+  if (!post) {
     return (
       <div>
-        <p>Không tìm thấy bài viết</p>
+        <h1>Không tìm thấy bài viết</h1>
       </div>
-    )
+    );
   }
 
   return (
     <>
       <article className={styles.articleContainer}>
-        <h1>{post?.title}</h1>
+        <h1 className={styles.articleTitle}>{post?.title}</h1>
 
         <div className={styles.articleContent}>
           {post?.content.map((text, index) => (

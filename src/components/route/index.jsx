@@ -1,14 +1,15 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Home from '../../pages/Home';
-import Post from '../content/Post/Post';
+import Detail from '../../pages/Detail';
 
-const Router = () => {
+const AppRoute = () => {
   return (
     <Routes>
+      <Route path='/' element={<Navigate to={'/home'} replace={true} />} />
       <Route path='/home' element={<Home />} />
-      <Route path='/post' element={<Post />} />
+      <Route path='/details/:name' element={<Detail />} />
     </Routes>
   );
 };
 
-export default Router;
+export default AppRoute;

@@ -1,14 +1,20 @@
 import styles from './index.module.scss'; // Adjust the path as needed
 import logoGDU from '../../../assets/logoGDU.png';
 import logoDoan from '../../../assets/logoDoan.png';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const handleClickImageGDU = () => {
     window.location.href = 'https://giadinh.edu.vn/';
   };
 
   const handleClickImageDoan = () => {
     window.location.href = 'https://doanthanhnien.vn/';
+  };
+
+  const handleNavigateHomePage = () => {
+    navigate('/home');
   };
 
   return (
@@ -23,10 +29,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className={styles.navbarSupportContent}>
-          <div className={styles.navbarSupport}>DETAIL</div>
-          <div className={styles.navbarSupport}>ABOUT</div>
-          <div className={`${styles.navbarSupport} ${styles.contact}`}>
-            CONTACT
+          <div
+            className={styles.navbarSupport}
+            onClick={handleNavigateHomePage}
+          >
+            HOME
           </div>
         </div>
       </div>
