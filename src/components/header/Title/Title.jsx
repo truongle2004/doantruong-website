@@ -3,10 +3,11 @@ import styles from './index.module.scss';
 import children from '../../../assets/children5.png';
 import logoDoan from '../../../assets/logoDoan.png';
 import logoGDU from '../../../assets/logoGDU.png';
+import { navigateUrl } from '../../../utils';
 
 const HeadingTitle = () => {
   return (
-    <div className={styles["image-container"]}>
+    <div className={styles['image-container']}>
       <img src={children} alt='tapthe' className={styles.image} />
 
       <div className={styles.overlay}>
@@ -47,14 +48,16 @@ const HeadingTitle = () => {
 
           <div className={styles.logo}>
             <img
+              onClick={() => navigateUrl('https://doanthanhnien.vn/')}
               src={logoDoan}
               alt='logo đoàn thanh niên'
-              className={styles["logo-doan"]}
+              className={styles['logo-doan']}
             />
             <img
               src={logoGDU}
+              onClick={() => navigateUrl('https://giadinh.edu.vn/')}
               alt='logo Gia Dinh university'
-              className={styles["logo-gdu"]}
+              className={styles['logo-gdu']}
             />
           </div>
         </motion.div>

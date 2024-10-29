@@ -25,11 +25,11 @@ export const Gallery = () => {
             onClick={() => handleSetPost(item)}
           >
             <img
-              src={item.cover[0]}
+              src={item?.cover[0]}
               alt={`Gallery image ${index + 1}`}
               className={styles.galleryImage}
             />
-            <div className={styles.galleryCaption}>{item.title}</div>
+            <div className={styles.galleryCaption}>{item?.title}</div>
           </div>
         ))}
       </div>

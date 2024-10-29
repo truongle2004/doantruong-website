@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Prototypes from 'prop-types';
 import { formatString } from '../../../utils';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 const PostItem = ({ cover, title, content }) => {
   const { setPost } = postStore();
@@ -53,29 +54,34 @@ const Post = () => {
     window.location.href = url;
   };
 
+  const limit = useRef(5);
+
   return (
     <>
       <header className={styles.titleHeader}>
         <h1>HOẠT ĐỘNG NỔI BẬT</h1>
       </header>
       <div>
-        {data.map((data, index) => (
-          <div key={index}>
-            <PostItem
-              cover={data?.cover}
-              title={data?.title}
-              content={data?.content}
-              index={index}
-            />
-          </div>
-        ))}
+        {data.map((data, index) => {
+          if (index >= limit.current) return null;
+          return (
+            <div key={index}>
+              <PostItem
+                cover={data?.cover}
+                title={data?.title}
+                content={data?.content}
+                index={index}
+              />
+            </div>
+          );
+        })}
       </div>
       <div className={styles.imageSection}>
         <motion.div
           className={styles.imageTitle}
-          initial={{ opacity: 0, y: -20 }} // Initial state
-          animate={{ opacity: 1, y: 0 }} // Animate to this state
-          transition={{ duration: 0.5 }} // Duration of the animation
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
           <h1>Tuổi Trẻ Tỏa Sáng</h1>
           <h2>Hành Trình Gia Nhập Đoàn của Các Đoàn Viên Mới</h2>

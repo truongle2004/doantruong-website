@@ -11,3 +11,11 @@ export const formatString = (input) => {
     .trim()
     .replace(/\s+/g, '-');
 };
+
+export const navigateUrl = (url) => {
+  window.location.href = url;
+};
+
+export const outputString = (text) => {
+  return text.replace(/(\d+\.\s)/g, '\n$1');
+};
