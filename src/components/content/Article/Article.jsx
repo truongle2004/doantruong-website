@@ -1,10 +1,15 @@
-import SimpleImageSlider from "react-simple-image-slider";
-import postStore from "./../../../stores/postStore";
-import styles from "./index.module.scss";
-import Navbar from "../Navbar/Navbar";
+import SimpleImageSlider from 'react-simple-image-slider';
+import postStore from './../../../stores/postStore';
+import styles from './index.module.scss';
+import Navbar from '../Navbar/Navbar';
+import { useEffect } from 'react';
 
 const Article = () => {
   const post = postStore((state) => state.post);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   if (!post) {
     return (
